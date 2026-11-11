@@ -26,24 +26,24 @@ bundle, so the site is fully static.
 
 ### Changes from the archived build
 
-The files in [`docs/`](docs/) are byte-for-byte the archived files, except:
+The site files in the repository root are byte-for-byte the archived files, except:
 
-- `docs/index.html`: asset paths changed from `/paper/...` to relative `./...`.
-- `docs/static/js/main.243aca32.js`: two minimal patches
+- `index.html`: asset paths changed from `/paper/...` to relative `./...`.
+- `static/js/main.243aca32.js`: two minimal patches
   - webpack public path `"/paper/"` → `"./"`
   - service-worker registration disabled (`if("serviceWorker"in navigator)` → `if(!1)`),
     because the original `service-worker.js` wasn't archived.
-- `docs/.nojekyll` added so GitHub Pages serves the files as is.
+- `.nojekyll` added so GitHub Pages serves the files as is.
 
 External dependencies loaded at runtime: Bootstrap 3.3.7 CSS (maxcdn.bootstrapcdn.com) and
 the Roboto font (Google Fonts).
 
 ## Hosting
 
-GitHub Pages serves the site from the `main` branch, `/docs` folder.
+GitHub Pages serves the site from the `main` branch, root folder.
 
 To preview locally:
 
 ```bash
-python -m http.server 8765 --directory docs
+python -m http.server 8765
 ```

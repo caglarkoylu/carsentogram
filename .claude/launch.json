@@ -4,7 +4,7 @@
     {
       "name": "carsentogram-static",
       "runtimeExecutable": "C:\\Users\\ckoylu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
-      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "docs"],
+      "runtimeArgs": ["-m", "http.server", "8765"],
       "port": 8765
     }
   ]
